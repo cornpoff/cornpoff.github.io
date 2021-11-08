@@ -85,6 +85,13 @@ a:hover{
   padding-bottom: 15px;
 }
 
+.grid13{
+  display: grid;
+  grid-template-columns: 4.2fr 5.8fr ;
+  grid-gap: 15px;
+  padding-bottom: 15px;
+}
+
 .grid23{
   display: grid;
   grid-template-columns: 4.5fr 5.5fr;
@@ -154,7 +161,7 @@ a:hover{
 
 /* phone view */
 @media screen and (max-width: 1000px) {
-  .grid2, .grid3, .grid6, .grid23{
+  .grid2, .grid3, .grid6, .grid23, .grid13{
     grid-template-columns: auto;
   }
   body{
