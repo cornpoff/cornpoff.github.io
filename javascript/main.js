@@ -20,4 +20,23 @@ $(document).ready(function(){
 	$(".togglebutton").click(function(){
 		$(".authorbox").toggle();
 	})
+
+	var images = ['cornpoff.png', 'cornpoff1.png', 'cornpoff2.png', 'cornpoff3.png', 'cornpoff4.png'];
+	$(".logo").attr( 'src', 'images/' + images[Math.floor(Math.random() * images.length)] );
+
+	button = document.getElementById('gototop');
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+	    button.style.display = "block";
+	  } else {
+	    button.style.display = "none";
+	  }
+	}
+
+	button.addEventListener("click", function(){
+		$("html,body").animate({scrollTop:0}, "slow")
+	})
 });
